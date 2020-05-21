@@ -1,0 +1,18 @@
+/*  COLOR PALETTE
+    ---
+    RED: #ff5e5b
+    GREY: #d8d8d8
+    CREAM: #ffffea
+    LIGHT BLUE: #00cecb
+    YELLOW: #ffed66  */
+
+body {
+  background-color: #00cecb;
+}
+
+.heading {
+  font-family: 'Lobster', cursive;
+  font-size: 84px;
+  color: #ffed66;
+  text-align: center;
+}

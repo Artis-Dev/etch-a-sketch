@@ -1,0 +1,24 @@
+{
+  "name": "etch-a-sketch",
+  "version": "1.0.0",
+  "description": "Project to create something like 'Etch A Sketch' toy using only HTML, CSS and Vanilla JS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artis-Dev/etch-a-sketch.git"
+  },
+  "author": "ArtisDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Artis-Dev/etch-a-sketch/issues"
+  },
+  "homepage": "https://github.com/Artis-Dev/etch-a-sketch#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}
