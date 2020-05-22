@@ -25,16 +25,38 @@ main {
 #game-container {
   display: inline-grid;
   /* small(16x22) medium.default(32x44) big(64x88) */
-  grid-template-columns: repeat(44, auto);
   justify-content: center;
   border: 80px solid #ff5e5b;
   border-radius: 20px;
   grid-gap: 1px;
   background-color: #aaaaaa;
+  /* cursor: crosshair; */
 }
 
 #game-container > div {
+  background-color: #d8d8d8;
+}
+
+.small-grid {
+  grid-template-columns: repeat(22, auto);
+}
+.small-grid > div {
+  height: 41px;
+  width: 41px;
+}
+
+.medium-grid-default {
+  grid-template-columns: repeat(44, auto);
+}
+.medium-grid-default > div {
   height: 20px;
   width: 20px;
-  background-color: #d8d8d8;
+}
+
+.big-grid {
+  grid-template-columns: repeat(88, auto);
+}
+.big-grid > div {
+  height: 9.5px;
+  width: 9.5px;
 }
