@@ -6,20 +6,31 @@
   <title>Etch A Sketch</title>
   <link rel="stylesheet" href="css/modern-normalize.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap">
 </head>
 <body>
-  <header>
+
+  <header class="header">
     <h1 class="heading">Etch A Sketch</h1>
   </header>
 
   <main>
-    <div>
-      <button class="size small">Small</button>
-      <button class="size medium">Medium</button>
-      <button class="size big">Big</button>
-    </div>
     <div id="game-container" class="medium-grid-default"></div>
+
+    <div class="controls">
+      <div>
+        <p>Grid density: </p>
+        <button class="size small">Small</button>
+        <button class="size medium">Medium</button>
+        <button class="size big">Big</button>
+      </div>
+      <div>
+        <p>Mode: </p>
+        <button class="mode classic">Classic</button>
+        <button class="mode modern">Modern</button>
+        <button class="mode psychedelic">Psychedelic</button>
+      </div>
+    </div>
 
   </main>
 
