@@ -9,6 +9,7 @@
 body {
   background-color: #00cecb;
   font-family: 'Montserrat', sans-serif;
+  padding: 50px 0;
 }
 
 main {
@@ -20,7 +21,7 @@ main {
   border-radius: 20px 20px 0 0;
   width: 1079px;
   height: 94px;
-  margin: 80px auto 0;
+  margin: 0 auto;
 }
 
 .heading {
@@ -28,7 +29,7 @@ main {
   font-size: 70px;
   color: #ffed66;
   text-align: center;
-  margin-bottom: 0;
+  margin: 0;
   line-height: 1;
   padding-top: 14px;
 }
@@ -73,14 +74,23 @@ main {
   transition: all 0.3s;
 }
 
+.mode-controls {
+  margin-left: 20px;
+}
+
 .active-button {
   background-color: #ffed66 !important;
+}
+
+.erase {
+  color: #ff5e5b !important;
+  font-weight: 700;
 }
 
 /* Game container */
 /* small(16x22) medium.default(32x44) big(64x88) */
 
-#game-container {
+#grid-container {
   display: inline-grid;
   border: solid #ff5e5b;
   border-width: 6px 100px 0;
@@ -89,11 +99,8 @@ main {
   /* cursor: crosshair; */
 }
 
-#game-container > div {
+#grid-container > div {
   background-color: #d8d8d8;
-}
-#game-container > div:hover {
-  background-color: #ff5e5b;
 }
 
 .small-grid {
@@ -120,22 +127,38 @@ main {
   width: 9px;
 }
 
+.classic-paint {
+  background-color: #999999 !important;
+}
+
 /* Breakpoints */
 
 @media only screen and (max-width: 1080px) {
   .header {
-    width: 839px;
+    width: 739px;
   }
+
   .controls {
     flex-direction: column;
-    width: 839px;
+    width: 739px;
   }
+
+  .mode-controls {
+    margin-left: 0;
+  }
+
+  #grid-container {
+    border-width: 6px 50px 0;
+  }
+
   .small-grid {
     grid-template-columns: repeat(16, auto);
   }
+
   .medium-grid-default {
     grid-template-columns: repeat(32, auto);
   }
+
   .big-grid {
     grid-template-columns: repeat(64, auto);
   }
