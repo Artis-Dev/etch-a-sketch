@@ -1,13 +1,13 @@
 /*  COLOR PALETTE
     ---
-    RED: #ff5e5b
-    GREY: #d8d8d8
-    CREAM: #ffffea
-    LIGHT BLUE: #00cecb
-    YELLOW: #ffed66  */
+    RED: #FF5E5B
+    GREY: #D8D8D8
+    CREAM: #FFFFEA
+    LIGHT BLUE: #78CCCB
+    YELLOW: #FFED66  */
 
 body {
-  background-color: #00cecb;
+  background-color: #78CCCB;
   font-family: 'Montserrat', sans-serif;
   padding: 50px 0;
 }
@@ -17,7 +17,7 @@ main {
 }
 
 .header {
-  background-color: #ff5e5b;
+  background-color: #FF5E5B;
   border-radius: 20px 20px 0 0;
   width: 1079px;
   height: 94px;
@@ -27,7 +27,7 @@ main {
 .heading {
   font-family: 'Lobster', cursive;
   font-size: 70px;
-  color: #ffed66;
+  color: #FFED66;
   text-align: center;
   margin: 0;
   line-height: 1;
@@ -42,7 +42,7 @@ main {
   padding: 0 80px;
   width: 1079px;
   height: 100px;
-  background-color: #ff5e5b;
+  background-color: #FF5E5B;
   border-radius: 0 0 20px 20px;
 }
 
@@ -52,13 +52,13 @@ main {
 
 }
 .controls > div > p {
-  color: #ffffea;
+  color: #FFFFEA;
   font-weight: 700;
   margin: 0;
 }
 
 .controls button {
-  background-color: #ffffea;
+  background-color: #FFFFEA;
   color: #000000;
   border: none;
   border-radius: 3px;
@@ -70,7 +70,7 @@ main {
 }
 
 .controls button:hover {
-  background-color: #ffed66;
+  background-color: #FFED66;
   transition: all 0.3s;
 }
 
@@ -79,11 +79,11 @@ main {
 }
 
 .active-button {
-  background-color: #ffed66 !important;
+  background-color: #FFED66 !important;
 }
 
 .erase {
-  color: #ff5e5b !important;
+  color: #FF5E5B !important;
   font-weight: 700;
 }
 
@@ -92,15 +92,15 @@ main {
 
 #grid-container {
   display: inline-grid;
-  border: solid #ff5e5b;
+  border: solid #FF5E5B;
   border-width: 6px 100px 0;
   grid-gap: 1px;
-  background-color: #aaaaaa;
+  background-color: #AAAAAA;
   /* cursor: crosshair; */
 }
 
 #grid-container > div {
-  background-color: #d8d8d8;
+  background-color: #D8D8D8;
 }
 
 .small-grid {
@@ -127,8 +127,21 @@ main {
   width: 9px;
 }
 
-.classic-paint {
-  background-color: #999999 !important;
+.footer {
+  text-align: center;
+  margin-top: 15px;
+  color: #000000;
+}
+
+.footer-link {
+  color: #FF5E5B;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.footer-link:hover {
+  color: #FFED66;
+  transition: all 0.2s;
 }
 
 /* Breakpoints */

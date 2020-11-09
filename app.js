@@ -1,6 +1,8 @@
 const sizeButtons = document.querySelectorAll('.size');
 const modeButtons = document.querySelectorAll('.mode');
 
+let currentMode = '';
+
 function generateGrid(size = 32 * 44, cssClass = 'medium-grid-default') {
   const gameContainer = document.getElementById('grid-container');
 
@@ -15,12 +17,34 @@ function generateGrid(size = 32 * 44, cssClass = 'medium-grid-default') {
   }
 }
 
-function startPainting() {
+function erase() {
   const gridItems = document.querySelectorAll('#grid-container > div');
 
   gridItems.forEach((item) => {
-    item.addEventListener('mouseenter', () => {
-      item.classList.add('classic-paint');
+    item.style.backgroundColor = '#D8D8D8';
+    item.style.opacity = '1';
+  });
+}
+
+function startPainting(mode) {
+  const gridItems = document.querySelectorAll('#grid-container > div');
+
+  gridItems.forEach((item) => {
+    item.count = 0;
+    item.addEventListener('mouseenter', (e) => {
+      if (mode === 'classic' || currentMode === 'classic' || currentMode === '') {
+        e.target.style.backgroundColor = '#707070';
+        e.target.style.opacity = 1;
+      } else if (mode === 'modern' || currentMode === 'modern') {
+        e.target.style.backgroundColor = '#707070';
+        e.target.count += 1;
+        e.target.style.opacity = 0.2 * e.target.count;
+      } else if (mode === 'psychedelic' || currentMode === 'psychedelic') {
+        const psychedelicPallete = ['#EF476F', '#FFD166', '#06D6A0', '#118AB2', '#073B4C'];
+        const randomColor = Math.floor(Math.random() * psychedelicPallete.length);
+        e.target.style.opacity = 1;
+        e.target.style.backgroundColor = psychedelicPallete[randomColor];
+      }
     });
   });
 }
@@ -69,26 +93,35 @@ function changeMode() {
 
   modeButtons.forEach((selection) => {
     selection.addEventListener('click', () => {
-      if (selection.classList.contains('small')) {
-        startPainting();
+      if (selection.classList.contains('classic')) {
+        startPainting('classic');
         selectButton(selection);
-      } else if (selection.classList.contains('medium')) {
-        startPainting();
+        currentMode = 'classic';
+      } else if (selection.classList.contains('modern')) {
+        startPainting('modern');
         selectButton(selection);
+        currentMode = 'modern';
       } else {
-        startPainting();
+        startPainting('psychedelic');
         selectButton(selection);
+        currentMode = 'psychedelic';
       }
     });
   });
 }
 
+function eraseListener() {
+  const eraseButton = document.querySelector('.erase');
+
+  eraseButton.addEventListener('click', erase);
+}
+
 function startGame() {
   generateGrid();
-  startPainting();
+  startPainting('classic');
   changeSize();
   changeMode();
-  // erase();
+  eraseListener();
 }
 
 startGame();
