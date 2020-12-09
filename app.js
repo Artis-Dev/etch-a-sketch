@@ -72,14 +72,17 @@ function changeSize() {
   sizeButtons.forEach((selection) => {
     selection.addEventListener('click', () => {
       if (selection.classList.contains('small')) {
+        erase();
         generateGrid(small, 'small-grid');
         startPainting();
         selectButton(selection);
       } else if (selection.classList.contains('medium')) {
+        erase();
         generateGrid(medium, 'medium-grid-default');
         startPainting();
         selectButton(selection);
       } else {
+        erase();
         generateGrid(big, 'big-grid');
         startPainting();
         selectButton(selection);
