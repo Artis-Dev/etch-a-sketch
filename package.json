@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/Artis-Dev/etch-a-sketch#readme",
   "devDependencies": {
-    "eslint": "^8.24.0",
+    "eslint": "^8.55.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.29.0"
   }
 }
